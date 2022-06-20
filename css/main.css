@@ -1,20 +1,161 @@
 body {
   font-family: Helvetica;
   font-weight: 300;
+  background-color: WhiteSmoke;
+  margin: 0;
 }
 
 .header {
+  width: 98%;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  margin: 30px;
+  padding: 1%;
+  background-color: GhostWhite;
+  box-shadow: 0 0 7px #444;
+  position: sticky;
+}
+
+.header__logo {
+  /* width: 370px; */
+}
+
+.header__title,
+.dish_item-structure {
+  text-transform: lowercase;
 }
 
 .header__contacts {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  /* width: 370px; */
+}
+
+.middle_block {
+  display: flex;
+  flex-wrap: nowrap;
+  /* position: relative; */
+}
+
+.side_menu {
+  width: 10%;
+  min-width: 120px;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: GhostWhite;
+}
+
+.side_menu-title {
+  padding: 10%;
+  margin-top: 20px;
+}
+
+.side_menu-title h3 {
+  padding: 0;
+  margin: 0;
+  color: #ba0000;
+}
+
+.side_menu-list-marker {
+  height: 100%;
+  width: 15px;
+  display: block;
+  background-color: #002588;
+}
+
+.side_menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* .side_menu-list li:first-child {
+  border-top: 2px solid lightgray;
+} */
+
+.side_menu-list li {
+  display: block;
+  box-sizing: border-box;
+  border-top: 2px solid lightgray;
+  padding: 10%;
+  color: #002588;
+}
+
+.side_menu-list li:last-child {
+  border-bottom: 2px solid lightgray;
+}
+
+.side_menu-list li:hover {
+  color: #ba0000;
+  border-top: 2px solid #002588;
+}
+
+.dishes_list {
+  max-width: 90%;
+  height: 100vh;
+}
+
+.dishes {
+  display: flex;
+  margin: 1%;
+}
+
+.dish_item {
+  max-width: 25%;
+  background-color: white;
+  border: 1px solid darkgrey;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #444;
+  margin: 1%;
+}
+
+.dish_item-img {
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+}
+
+.dish_item-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.dish_item-weight {
+  display: flex;
+  font-size: 10px;
+  margin: 5px;
+  color: darkgray;
+}
+
+.dish_item-structure {
+  font-size: 11px;
+  margin: 5px;
+}
+
+.dish_item-weight-letter,
+.dish_item-price-letter {
+  margin-left: 0.5ch;
+}
+
+.dish_item-price {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 5px 10px;
+}
+
+.dish_item-title,
+.dish_item-weight,
+.dish_item-structure,
+.dish_item-price {
+  margin-left: 10px;
+}
+
+.header__title::first-letter,
+.dish_item-title::first-letter {
+  text-transform: uppercase;
 }
 
 
