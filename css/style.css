@@ -1,17 +1,17 @@
 @font-face {
   font-family: '20976';
-  src: url('/fonts/20665.eot');
-  src: url('/fonts/20976.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/20976.woff2') format('woff2');
+  src: url('../sp/fonts/20665.eot');
+  src: url('../sp/fonts/20976.eot?#iefix') format('embedded-opentype'),
+       url('../sp/fonts/20976.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'MontserratAlternates-Italic';
-  src: url('/fonts/MontserratAlternates-Italic.svg#MontserratAlternates-Italic') format('svg'),
-       url('/fonts/MontserratAlternates-Italic.ttf') format('truetype'),
-       url('/fonts/MontserratAlternates-Italic.woff') format('woff');
+  src: url('../sp/fonts/MontserratAlternates-Italic.svg#MontserratAlternates-Italic') format('svg'),
+       url('../sp/fonts/MontserratAlternates-Italic.ttf') format('truetype'),
+       url('../sp/fonts/MontserratAlternates-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
