@@ -1,19 +1,54 @@
-const popup = document.getElementById('modal_main');
-
-popup.className = 'modal modal_active';
-
-const closeBtn = document.querySelectorAll('.modal__close');
-
-closeBtn.forEach(function(el) {
+const sideMenu = document.querySelectorAll('.side_menu-list li');
+sideMenu.forEach(function(el) {
     //вешаем событие
-    el.onclick = function() {
-
+    el.onclick = function(event) {
         //производим действия
-        console.log(this);
-        this.closest('.modal').className = 'modal';
-        if (this.className.includes('btn_danger')) {
-            document.getElementById('modal_success').className = 'modal modal_active';
+        event.preventDefault();
+        console.log(this.className);
+        if (!this.className.includes('side_menu-list-active')) {
+            // const listElements = this.closest('.side_menu-list').getElementsByTagName('li');
+            sideMenu.forEach(function(el) {
+                if (el.className.includes('side_menu-list-active')) {
+                    el.className = '';
+                }
+            });
+            this.className = 'side_menu-list-active';
         }
-
     }
 });
+
+const buyBtn = document.querySelectorAll('.dish_item-btn');
+buyBtn.forEach(function(el) {
+    //вешаем событие
+    el.onclick = function(event) {
+        //производим действия
+        event.preventDefault();
+        this.classList.remove('dish_item-btn-visible');
+        this.closest('.dish_item-price-btn').querySelector('.dish_item-counter').classList.add('dish_item-counter-visible');
+        let count = this.closest('.dish_item-price-btn').querySelector('.dish_item-counter-count');
+        count.textContent = 1;
+    }
+});
+
+const dishCounter = document.querySelectorAll('.dish_item-counter svg');
+dishCounter.forEach(function(el) {
+    //вешаем событие
+    el.onclick = function(event) {
+        //производим действия
+        event.preventDefault();
+        let count = this.closest('.dish_item-counter').querySelector('.dish_item-counter-count');
+        if (this.classList.value.includes('dish_item-counter-inc')) {
+            count.textContent = Number(count.textContent) + 1;
+        }
+        else {
+            count.textContent = Number(count.textContent) - 1;
+            if (Number(count.textContent) < 1) {
+                const counter = this.closest('.dish_item-counter');
+                const buyBtn = this.closest('.dish_item-price-btn').querySelector('.dish_item-btn');
+                counter.classList.remove('dish_item-counter-visible');
+                buyBtn.classList.add('dish_item-btn-visible');
+            }
+        }
+    }
+});
+
