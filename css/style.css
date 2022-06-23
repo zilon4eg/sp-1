@@ -26,7 +26,7 @@ html {
 body {
   font-family: MontserratAlternates-Italic;
   font-weight: 300;
-  background-color: WhiteSmoke;
+  background-color: #e3faec;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -56,21 +56,31 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1%;
-  background-color: GhostWhite;
+  background-color: #becfc5;
   box-shadow: 0 0 7px #444;
   position: sticky;
   top: 0;
 }
 
-.header__title,
+.header_logo {
+  height: 100px;
+}
+
 .dish_item-structure {
   text-transform: lowercase;
 }
 
-.header__contacts {
+.header_contacts {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.header_contacts a {
+  text-decoration:none;
+  color: black;
+  font-weight: bold;
+  line-height: 22px;
 }
 
 .middle_block {
@@ -96,7 +106,7 @@ body {
 .side_menu-title h3 {
   padding: 0;
   margin: 0;
-  color: #ba0000;
+  color: #498c33;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
@@ -114,7 +124,7 @@ body {
   box-sizing: border-box;
   border-top: 2px solid lightgray;
   padding: 5%;
-  color: #002588;
+  color: #7bb928;
   align-items: center;
 }
 
@@ -127,17 +137,17 @@ body {
 }
 
 .side_menu-list li:hover {
-  color: #ba0000;
+  color: #498c33;
   cursor: pointer;
 }
 
 .side_menu-list li:hover,
 .side_menu-list li:hover + li {
-  border-top: 2px solid #002588;
+  border-top: 2px solid #2e581f;
 }
 
 .side_menu-list li:last-child:hover {
-  border-bottom: 2px solid #002588;
+  border-bottom: 2px solid #2e581f;
 }
 
 .dishes_list {
@@ -215,8 +225,8 @@ body {
   min-height: 20px;
   padding: 0;
   outline: none;
-  background: #ba0000;
-  border: 1px solid #ba0000;
+  background: #498c33;
+  border: 1px solid #498c33;
   box-sizing: border-box;
   font-family: MontserratAlternates-Italic;
   font-size: 14px;
@@ -228,7 +238,7 @@ body {
 }
 
 .dish_item-btn:hover {
-  border-color: darkred;
+  border-color: #2e581f;
   box-shadow: 0 0 7px #444;
   cursor: pointer;
 }
@@ -238,11 +248,11 @@ body {
   width: 40%;
   min-width: 68px;
   min-height: 20px;
-  border: 1px solid #002588;
+  border: 1px solid black;
   box-sizing: border-box;
   font-size: 18px;
-  font-weight: normal;
-  color: #ba0000;
+  font-weight: bold;
+  color: #498c33;
   border-radius: 15px;
   display: flex;
   justify-content: space-evenly;
@@ -289,16 +299,16 @@ body {
 /* Активность неактивность блоков */
 
 .side_menu-list .side_menu-list-active {
-  color: #ba0000;
+  color: #498c33;
 }
 
 .side_menu-list .side_menu-list-active,
 .side_menu-list .side_menu-list-active + li {
-  border-top: 2px solid #002588;
+  border-top: 2px solid #2e581f;
 }
 
 .side_menu-list .side_menu-list-active:last-child {
-  border-bottom: 2px solid #002588;
+  border-bottom: 2px solid #2e581f;
 }
 
 
