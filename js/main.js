@@ -15,22 +15,38 @@ function clickSideMenu(data) {
                 this.className = 'side_menu-list-active';
             }
 
-            data.forEach((el) => {
-                if ((el.visible === true) && (el.delete === false)) {
-                    if (String(this.textContent).toLowerCase === String(el.category).toLowerCase) {
+            for (i=0; i<data.length; i++) {
+                if ((data[i].visible === true) && (data[i].delete === false)) {
+                    if (String(this.textContent).toLowerCase === String(data[i].category).toLowerCase) {
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
                         document.querySelector("dishes").appendChild(cloneEl);
 
                         const dish = document.querySelector('.empty_dish_item');
                         dish.className = 'dish_item';
-                        dish.dataset.id = el.id;
-                        dish.querySelector('.dish_item-title').textContent = el.title;
-                        dish.querySelector('.dish_item-weight-number').textContent = el.weight;
-                        dish.querySelector('.dish_item-structure').textContent = el.description;
-                        dish.querySelector('.dish_item-price-number').textContent = el.price;
+                        dish.dataset.id = data[i].id;
+                        dish.querySelector('.dish_item-title').textContent = data[i].title;
+                        dish.querySelector('.dish_item-weight-number').textContent = data[i].weight;
+                        dish.querySelector('.dish_item-structure').textContent = data[i].description;
+                        dish.querySelector('.dish_item-price-number').textContent = data[i].price;
                     }
                 }
-            });
+            }
+            // data.forEach((el) => {
+            //     if ((el.visible === true) && (el.delete === false)) {
+            //         if (String(this.textContent).toLowerCase === String(el.category).toLowerCase) {
+            //             const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
+            //             document.querySelector("dishes").appendChild(cloneEl);
+
+            //             const dish = document.querySelector('.empty_dish_item');
+            //             dish.className = 'dish_item';
+            //             dish.dataset.id = el.id;
+            //             dish.querySelector('.dish_item-title').textContent = el.title;
+            //             dish.querySelector('.dish_item-weight-number').textContent = el.weight;
+            //             dish.querySelector('.dish_item-structure').textContent = el.description;
+            //             dish.querySelector('.dish_item-price-number').textContent = el.price;
+            //         }
+            //     }
+            // });
         }
     });
 }
