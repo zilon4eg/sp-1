@@ -6,7 +6,7 @@
 			"title": "салат цезарь с цыпленком",
 			"description": "цыплёнок, пармезан, салат айсберг, черри, гренки, цезарь соус.",
 			"weight": 230,
-			"cost": 299,
+			"price": 299,
 			"visible": true,
 			"deleted": false
 		},
@@ -16,7 +16,7 @@
 			"title": "фиш-н-чипс",
 			"description": "филе рыбы, острый кляр, картофель фри, соус для рыбы.",
 			"weight": 230,
-			"cost": 279,
+			"price": 279,
 			"visible": true,
 			"deleted": false
 		}

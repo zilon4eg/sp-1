@@ -7,7 +7,6 @@ function clickSideMenu(data) {
             event.preventDefault();
             console.log(this.className);
             if (!this.className.includes('side_menu-list-active')) {
-                // const listElements = this.closest('.side_menu-list').getElementsByTagName('li');
                 sideMenu.forEach(function(el) {
                     if (el.className.includes('side_menu-list-active')) {
                         el.className = '';
@@ -15,6 +14,23 @@ function clickSideMenu(data) {
                 });
                 this.className = 'side_menu-list-active';
             }
+
+            data.forEach((el) => {
+                if ((el.visible === true) && (el.delete === false)) {
+                    if (String(this.textContent).toLowerCase === String(el.category).toLowerCase) {
+                        const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
+                        document.querySelector("dishes").appendChild(cloneEl);
+
+                        const dish = document.querySelector('.empty_dish_item');
+                        dish.className = 'dish_item';
+                        dish.dataset.id = el.id;
+                        dish.querySelector('.dish_item-title').textContent = el.title;
+                        dish.querySelector('.dish_item-weight-number').textContent = el.weight;
+                        dish.querySelector('.dish_item-structure').textContent = el.description;
+                        dish.querySelector('.dish_item-price-number').textContent = el.price;
+                    }
+                }
+            });
         }
     });
 }
@@ -83,9 +99,6 @@ function clickDishCounter(basket, basketIdList) {
                 });
                 basketIdList.push(Number(dish.dataset.id));
             }
-
-            console.log(basket);
-            console.log(basketIdList);
         }
     });
 }

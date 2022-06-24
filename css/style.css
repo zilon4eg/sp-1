@@ -283,6 +283,10 @@ body {
 
 /* Видимость и невидимость блоков */
 
+.empty_dish_item {
+  display: none;
+}
+
 .dish_item-btn,
 .dish_item-counter {
   display: none;
