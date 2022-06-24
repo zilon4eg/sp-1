@@ -14,20 +14,20 @@ function clickSideMenu(data) {
                 this.className = 'side_menu-list-active';
             }
 
-            for (i=0; i<data.length; i++) {
-                console.log(this.textContent, data[i].category);
-                if ((data[i].visible === true) && (data[i].delete === false)) {
-                    if (this.textContent === data[i].category) {
+            for (i=0; i<data.dishes.length; i++) {
+                console.log(this.textContent, data.dishes[i].category);
+                if ((data.dishes[i].visible === true) && (data.dishes[i].delete === false)) {
+                    if (this.textContent === data.dishes[i].category) {
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
                         document.querySelector("dishes").appendChild(cloneEl);
 
                         const dish = document.querySelector('.empty_dish_item');
                         dish.className = 'dish_item';
-                        dish.dataset.id = data[i].id;
-                        dish.querySelector('.dish_item-title').textContent = data[i].title;
-                        dish.querySelector('.dish_item-weight-number').textContent = data[i].weight;
-                        dish.querySelector('.dish_item-structure').textContent = data[i].description;
-                        dish.querySelector('.dish_item-price-number').textContent = data[i].price;
+                        dish.dataset.id = data.dishes[i].id;
+                        dish.querySelector('.dish_item-title').textContent = data.dishes[i].title;
+                        dish.querySelector('.dish_item-weight-number').textContent = data.dishes[i].weight;
+                        dish.querySelector('.dish_item-structure').textContent = data.dishes[i].description;
+                        dish.querySelector('.dish_item-price-number').textContent = data.dishes[i].price;
                     }
                 }
             }
