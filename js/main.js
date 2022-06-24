@@ -19,7 +19,7 @@ function clickSideMenu(data) {
     });
 }
 
-function clickBuyBtn() {
+function clickBuyBtn(basket, basketIdList) {
     const buyBtn = document.querySelectorAll('.dish_item-btn');
     buyBtn.forEach(function(el) {
         //вешаем событие
@@ -30,6 +30,13 @@ function clickBuyBtn() {
             this.closest('.dish_item-price-btn').querySelector('.dish_item-counter').classList.add('dish_item-counter-visible');
             let count = this.closest('.dish_item-price-btn').querySelector('.dish_item-counter-count');
             count.textContent = 1;
+
+            const dish = this.closest('.dish_item');
+            basket.push({
+                id: Number(dish.dataset.id),
+                count: Number(count.textContent)
+            });
+            basketIdList.push(Number(dish.dataset.id));
         }
     });
 }
@@ -74,6 +81,7 @@ function clickDishCounter(basket, basketIdList) {
                     id: Number(dish.dataset.id),
                     count: Number(count.textContent)
                 });
+                basketIdList.push(Number(dish.dataset.id));
             }
 
             console.log(basket);
