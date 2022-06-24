@@ -55,6 +55,7 @@ function clickDishCounter(basket, basketIdList) {
                 }
             }
             
+            const dish = this.closest('.dish_item');
             if (basketIdList.includes(Number(dish.dataset.id))) {
                 basket.forEach((item, index, array) => {
                     if (item.id === Number(dish.dataset.id)) {
