@@ -56,9 +56,15 @@ function clickDishCounter(basket, basketIdList) {
             }
             
             if (basketIdList.includes(Number(dish.dataset.id))) {
-                basket.forEach((el) => {
-                    if (el.id === Number(dish.dataset.id)) {
-                        el.count = count.textContent;
+                basket.forEach((item, index, array) => {
+                    if (item.id === Number(dish.dataset.id)) {
+                        if (count.textContent > 0) {
+                            item.count = count.textContent;
+                        }
+                        else {
+                            basket.splice(index, 1);
+                            basketIdList.splice(index, 1);
+                        }
                     }
                 });
             }
@@ -68,7 +74,9 @@ function clickDishCounter(basket, basketIdList) {
                     count: Number(count.textContent)
                 });
             }
+
             console.log(basket);
+            console.log(basketIdList);
         }
     });
 }
