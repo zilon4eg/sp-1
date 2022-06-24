@@ -1,0 +1,24 @@
+{
+	"deshes": [
+		{
+			"id": 1,
+			"category": "салаты",
+			"title": "салат цезарь с цыпленком",
+			"description": "цыплёнок, пармезан, салат айсберг, черри, гренки, цезарь соус.",
+			"weight": 230,
+			"cost": 299,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 2,
+			"category": "горячее",
+			"title": "фиш-н-чипс",
+			"description": "филе рыбы, острый кляр, картофель фри, соус для рыбы.",
+			"weight": 230,
+			"cost": 279,
+			"visible": true,
+			"deleted": false
+		}
+	]
+}

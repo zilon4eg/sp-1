@@ -52,3 +52,13 @@ dishCounter.forEach(function(el) {
     }
 });
 
+const baseUrl = 'https://zilon4eg.github.io/sp/';
+const filePath = 'data/dishes.json'
+const dataUrl = `${baseUrl}${filePath}`
+
+fetch(dataUrl)
+ .then(response => response.json())
+ .then(json => {
+        console.log(json);
+        // Do stuff with the contents of the JSON file here
+    });
