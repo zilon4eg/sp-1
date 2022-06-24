@@ -5,7 +5,6 @@ function clickSideMenu(data) {
         el.onclick = function(event) {
             //производим действия
             event.preventDefault();
-            console.log(this.value);
             if (!this.className.includes('side_menu-list-active')) {
                 sideMenu.forEach(function(el) {
                     if (el.className.includes('side_menu-list-active')) {
@@ -15,10 +14,9 @@ function clickSideMenu(data) {
                 this.className = 'side_menu-list-active';
             }
 
-            console.log(this.textContent);
-
             for (i=0; i<data.length; i++) {
                 if ((data[i].visible === true) && (data[i].delete === false)) {
+                    console.log(this.textContent, data[i].category);
                     if (this.textContent === data[i].category) {
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
                         document.querySelector("dishes").appendChild(cloneEl);
