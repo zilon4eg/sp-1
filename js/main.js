@@ -5,7 +5,7 @@ function clickSideMenu(data) {
         el.onclick = function(event) {
             //производим действия
             event.preventDefault();
-            console.log(String(this.textContent).toLowerCase);
+            console.log(String(this.value).toLowerCase);
             if (!this.className.includes('side_menu-list-active')) {
                 sideMenu.forEach(function(el) {
                     if (el.className.includes('side_menu-list-active')) {
