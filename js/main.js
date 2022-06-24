@@ -34,7 +34,7 @@ function clickBuyBtn() {
     });
 }
 
-function clickDishCounter() {
+function clickDishCounter(basket) {
     const dishCounter = document.querySelectorAll('.dish_item-counter svg');
     dishCounter.forEach(function(el) {
         //вешаем событие
@@ -80,5 +80,5 @@ function clickDishCounter() {
 
     clickSideMenu(data);
     clickBuyBtn();
-    clickDishCounter();
+    clickDishCounter(basket);
   })()
