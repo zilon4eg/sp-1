@@ -5,7 +5,7 @@ function clickSideMenu(data) {
         el.onclick = function(event) {
             //производим действия
             event.preventDefault();
-            console.log(String(this.value).toLowerCase);
+            console.log(String(this.value));
             if (!this.className.includes('side_menu-list-active')) {
                 sideMenu.forEach(function(el) {
                     if (el.className.includes('side_menu-list-active')) {
@@ -14,6 +14,8 @@ function clickSideMenu(data) {
                 });
                 this.className = 'side_menu-list-active';
             }
+
+            console.log(this.textContent);
 
             for (i=0; i<data.length; i++) {
                 if ((data[i].visible === true) && (data[i].delete === false)) {
