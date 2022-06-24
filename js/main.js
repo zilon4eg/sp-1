@@ -34,7 +34,7 @@ function clickBuyBtn(basket, basketIdList) {
             const dish = this.closest('.dish_item');
             basket.push({
                 id: Number(dish.dataset.id),
-                count: Number(count.textContent)
+                count: 1
             });
             basketIdList.push(Number(dish.dataset.id));
         }
@@ -103,6 +103,6 @@ function clickDishCounter(basket, basketIdList) {
     var basketIdList = [];
 
     clickSideMenu(data);
-    clickBuyBtn();
+    clickBuyBtn(basket, basketIdList);
     clickDishCounter(basket, basketIdList);
   })()
