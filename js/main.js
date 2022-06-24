@@ -41,7 +41,7 @@ function clickDishCounter() {
         el.onclick = function(event) {
             //производим действия
             event.preventDefault();
-            let count = this.closest('.dish_item-counter').querySelector('.dish_item-counter-count');
+            const count = this.closest('.dish_item-counter').querySelector('.dish_item-counter-count');
             if (this.classList.value.includes('dish_item-counter-inc')) {
                 count.textContent = Number(count.textContent) + 1;
             }
@@ -54,6 +54,15 @@ function clickDishCounter() {
                     buyBtn.classList.add('dish_item-btn-visible');
                 }
             }
+            
+            const dish = this.closest('.dish_item');
+            basket.push(
+                {
+                    'id': Number(dish.dataset.id),
+                    'count': Number(count.textContent)
+                }
+            )
+            console.log(basket);
         }
     });
 }
@@ -67,7 +76,7 @@ function clickDishCounter() {
     const data = await response.json();  // читаем ответ в формате JSON
     console.log(data);
 
-    var basket = {};  // корзина
+    var basket = [];  // корзина
 
     clickSideMenu(data);
     clickBuyBtn();
