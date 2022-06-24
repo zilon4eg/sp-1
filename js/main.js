@@ -17,7 +17,7 @@ function clickSideMenu(data) {
 
             for (i=0; i<data.length; i++) {
                 if ((data[i].visible === true) && (data[i].delete === false)) {
-                    if (String(this.textContent.toLowerCase()) === String(data[i].category.toLowerCase())) {
+                    if (String(this.textContent) === String(data[i].category)) {
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
                         document.querySelector("dishes").appendChild(cloneEl);
 
