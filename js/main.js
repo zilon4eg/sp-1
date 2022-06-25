@@ -16,8 +16,10 @@ function clickSideMenu(data) {
 
             for (i=0; i<data.dishes.length; i++) {
                 // console.log(this.textContent, data.dishes[i].category);
-                if ((data.dishes[i].visible === true) && (data.dishes[i].delete === false)) {
+                if ((data.dishes[i].visible == true) && (data.dishes[i].delete == false)) {
+                    console.log(data.dishes[i].visible, data.dishes[i].delete);
                     console.log('Условие доступности выполнено!');
+                    const 
                     if (this.textContent === data.dishes[i].category) {
                         console.log('Условие совпадения выполнено!');
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
