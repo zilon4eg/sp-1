@@ -22,7 +22,6 @@ function clickSideMenu(data, basket, basketIdList) {
                     const dishCategory = String(data.dishes[i].category);
                     if (sideMenuCategory.toLowerCase() === dishCategory.toLowerCase()) {
                         const emptyDishForm = document.querySelector('.empty_dish_item').cloneNode(true);
-                        console.log(emptyDishForm)
                         document.querySelector('.dishes').appendChild(emptyDishForm);
 
                         const dish = document.querySelector('.empty_dish_item');
