@@ -21,9 +21,9 @@ function clickSideMenu(data) {
                 if ((dishIsVisible) && (!dishIsDelete)) {
                     console.log(data.dishes[i].visible, data.dishes[i].delete);
                     console.log('Условие доступности выполнено!');
-                    const sideMenuCategory = this.textContent;
-                    const dishCategory = data.dishes[i].category;
-                    if (Text(sideMenuCategory).toLowerCase() === Text(dishCategory).toLowerCase()) {
+                    const sideMenuCategory = String(this.textContent);
+                    const dishCategory = String(data.dishes[i].category);
+                    if (sideMenuCategory.toLowerCase() === dishCategory.toLowerCase()) {
                         console.log('Условие совпадения выполнено!');
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
                         document.querySelector("dishes").appendChild(cloneEl);
