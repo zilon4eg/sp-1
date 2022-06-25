@@ -15,9 +15,11 @@ function clickSideMenu(data) {
             }
 
             for (i=0; i<data.dishes.length; i++) {
-                console.log(this.textContent, data.dishes[i].category);
+                // console.log(this.textContent, data.dishes[i].category);
                 if ((data.dishes[i].visible === true) && (data.dishes[i].delete === false)) {
+                    console.log('Условие доступности выполнено!');
                     if (this.textContent === data.dishes[i].category) {
+                        console.log('Условие совпадения выполнено!');
                         const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
                         document.querySelector("dishes").appendChild(cloneEl);
 
