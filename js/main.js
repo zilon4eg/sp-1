@@ -17,9 +17,9 @@ function clickSideMenu(data) {
             for (i=0; i<data.dishes.length; i++) {
                 // console.log(this.textContent, data.dishes[i].category);
                 const dishIsVisible = Boolean(data.dishes[i].visible);
-                const dishIsDelete = Boolean(data.dishes[i].delete);
+                const dishIsDelete = Boolean(data.dishes[i].deleted);
                 if ((dishIsVisible) && (!dishIsDelete)) {
-                    console.log(data.dishes[i].visible, data.dishes[i].delete);
+                    console.log(data.dishes[i].visible, data.dishes[i].deleted);
                     console.log('Условие доступности выполнено!');
                     const sideMenuCategory = String(this.textContent);
                     const dishCategory = String(data.dishes[i].category);
