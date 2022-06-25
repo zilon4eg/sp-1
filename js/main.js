@@ -1,4 +1,4 @@
-function clickSideMenu(data) {
+function clickSideMenu(data, basket, basketIdList) {
     const sideMenu = document.querySelectorAll('.side_menu-list li');
     sideMenu.forEach(function(el) {
         //вешаем событие
@@ -32,6 +32,15 @@ function clickSideMenu(data) {
                         dish.querySelector('.dish_item-weight-number').textContent = data.dishes[i].weight;
                         dish.querySelector('.dish_item-structure').textContent = data.dishes[i].description;
                         dish.querySelector('.dish_item-price-number').textContent = data.dishes[i].price;
+                        if (basketIdList.includes(Number(data.dishes[i].id))) {
+                            dish.querySelector('.dish_item-btn').classList.remove('dish_item-btn-visible');
+                            dish.querySelector('.dish_item-counter').classList.add('dish_item-counter-visible');
+                            basket.forEach((el) => {
+                                if (Number(el.id) === Number(data.dishes[i].id)) {
+                                    dish.querySelector('.dish_item-counter-count').textContent = el.count;
+                                }
+                            });
+                        }
                     }
                 }
             }
