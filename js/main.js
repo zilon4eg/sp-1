@@ -23,7 +23,7 @@ function clickSideMenu(data) {
                     if (sideMenuCategory.toLowerCase() === dishCategory.toLowerCase()) {
                         const emptyDishForm = document.querySelector('.empty_dish_item').cloneNode(true);
                         console.log(emptyDishForm)
-                        document.querySelector("dishes").appendChild(emptyDishForm);
+                        document.querySelector('.dishes').appendChild(emptyDishForm);
 
                         const dish = document.querySelector('.empty_dish_item');
                         dish.className = 'dish_item';
