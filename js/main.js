@@ -127,7 +127,7 @@ function clickDishCounter(basket, basketIdList) {
     var basket = [];  // корзина
     var basketIdList = [];
 
-    clickSideMenu(data);
+    clickSideMenu(data, basket, basketIdList);
     clickBuyBtn(basket, basketIdList);
     clickDishCounter(basket, basketIdList);
   })()
