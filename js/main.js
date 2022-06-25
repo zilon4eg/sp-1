@@ -15,18 +15,15 @@ function clickSideMenu(data) {
             }
 
             for (i=0; i<data.dishes.length; i++) {
-                // console.log(this.textContent, data.dishes[i].category);
                 const dishIsVisible = Boolean(data.dishes[i].visible);
                 const dishIsDelete = Boolean(data.dishes[i].deleted);
                 if ((dishIsVisible) && (!dishIsDelete)) {
-                    console.log(data.dishes[i].visible, data.dishes[i].deleted);
-                    console.log('Условие доступности выполнено!');
                     const sideMenuCategory = String(this.textContent);
                     const dishCategory = String(data.dishes[i].category);
                     if (sideMenuCategory.toLowerCase() === dishCategory.toLowerCase()) {
-                        console.log('Условие совпадения выполнено!');
-                        const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
-                        document.querySelector("dishes").appendChild(cloneEl);
+                        const emptyDishForm = document.querySelector('.empty_dish_item').cloneNode(true);
+                        console.log(emptyDishForm)
+                        document.querySelector("dishes").appendChild(emptyDishForm);
 
                         const dish = document.querySelector('.empty_dish_item');
                         dish.className = 'dish_item';
@@ -38,22 +35,6 @@ function clickSideMenu(data) {
                     }
                 }
             }
-            // data.forEach((el) => {
-            //     if ((el.visible === true) && (el.delete === false)) {
-            //         if (String(this.textContent).toLowerCase === String(el.category).toLowerCase) {
-            //             const cloneEl = document.querySelector('.empty_dish_item').cloneNode(true);
-            //             document.querySelector("dishes").appendChild(cloneEl);
-
-            //             const dish = document.querySelector('.empty_dish_item');
-            //             dish.className = 'dish_item';
-            //             dish.dataset.id = el.id;
-            //             dish.querySelector('.dish_item-title').textContent = el.title;
-            //             dish.querySelector('.dish_item-weight-number').textContent = el.weight;
-            //             dish.querySelector('.dish_item-structure').textContent = el.description;
-            //             dish.querySelector('.dish_item-price-number').textContent = el.price;
-            //         }
-            //     }
-            // });
         }
     });
 }
