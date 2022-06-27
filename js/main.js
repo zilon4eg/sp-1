@@ -1,10 +1,26 @@
+function basketVisibility(basket, basketIdList) {
+    const basketCountForm = document.querySelector('.side_menu-backet-count');
+    let basketCount = 0;
+    basket.forEach((el) => {
+        basketCount += el.count;
+    });
+    basketCountForm.textContent = basketCount;
+
+    const sidebarBacket = document.querySelector('.side_menu-backet');
+    if (basketIdList.length > 0) {
+        sidebarBacket.classList.remove('empty_basket');
+    }
+    else {
+        sidebarBacket.classList.add('empty_basket');
+    }
+}
+
 function fillDishesList(data, basket, basketIdList) {
-    console.log('fillDishesList');
     for (i=0; i<data.dishes.length; i++) {
         const dishIsVisible = Boolean(data.dishes[i].visible);
         const dishIsDelete = Boolean(data.dishes[i].deleted);
         if ((dishIsVisible) && (!dishIsDelete)) {
-            const sideMenuCategory = String(this.textContent);
+            const sideMenuCategory = String(document.querySelector('.side_menu-list-active').textContent);
             const dishCategory = String(data.dishes[i].category);
             if (sideMenuCategory.toLowerCase() === dishCategory.toLowerCase()) {
                 const emptyDishForm = document.querySelector('.empty_dish_item').cloneNode(true);
@@ -31,6 +47,10 @@ function fillDishesList(data, basket, basketIdList) {
             }
         }
     }
+    clickSideMenu(data, basket, basketIdList);
+    clickBuyBtn(basket, basketIdList);
+    clickDishCounter(basket, basketIdList);
+    basketVisibility(basket, basketIdList);
 }
 
 function clickSideMenu(data, basket, basketIdList) {
@@ -52,43 +72,10 @@ function clickSideMenu(data, basket, basketIdList) {
                 this.className = 'side_menu-list-active';
                 const dishes = document.querySelectorAll('.dish_item');
                 for (const dish of dishes) {
-                    console.log(dish);
                     dish.remove();
                 }
                 fillDishesList(data, basket, basketIdList);
             }
-
-            // for (i=0; i<data.dishes.length; i++) {
-            //     const dishIsVisible = Boolean(data.dishes[i].visible);
-            //     const dishIsDelete = Boolean(data.dishes[i].deleted);
-            //     if ((dishIsVisible) && (!dishIsDelete)) {
-            //         const sideMenuCategory = String(this.textContent);
-            //         const dishCategory = String(data.dishes[i].category);
-            //         if (sideMenuCategory.toLowerCase() === dishCategory.toLowerCase()) {
-            //             const emptyDishForm = document.querySelector('.empty_dish_item').cloneNode(true);
-            //             document.querySelector('.dishes').appendChild(emptyDishForm);
-
-            //             const dish = document.querySelector('.empty_dish_item');
-            //             dish.style.display = 'none';
-            //             dish.className = 'dish_item';
-            //             dish.dataset.id = data.dishes[i].id;
-            //             dish.querySelector('.dish_item-title').textContent = data.dishes[i].title;
-            //             dish.querySelector('.dish_item-weight-number').textContent = data.dishes[i].weight;
-            //             dish.querySelector('.dish_item-structure').textContent = data.dishes[i].description;
-            //             dish.querySelector('.dish_item-price-number').textContent = data.dishes[i].price;
-            //             if (basketIdList.includes(Number(data.dishes[i].id))) {
-            //                 dish.querySelector('.dish_item-btn').classList.remove('dish_item-btn-visible');
-            //                 dish.querySelector('.dish_item-counter').classList.add('dish_item-counter-visible');
-            //                 basket.forEach((el) => {
-            //                     if (Number(el.id) === Number(data.dishes[i].id)) {
-            //                         dish.querySelector('.dish_item-counter-count').textContent = el.count;
-            //                     }
-            //                 });
-            //             }
-            //             dish.style.display = 'flex';
-            //         }
-            //     }
-            // }
         }
     });
 }
@@ -111,6 +98,7 @@ function clickBuyBtn(basket, basketIdList) {
                 count: 1
             });
             basketIdList.push(Number(dish.dataset.id));
+            basketVisibility(basket, basketIdList);
         }
     });
 }
@@ -141,7 +129,7 @@ function clickDishCounter(basket, basketIdList) {
                 basket.forEach((item, index, array) => {
                     if (item.id === Number(dish.dataset.id)) {
                         if (count.textContent > 0) {
-                            item.count = count.textContent;
+                            item.count = Number(count.textContent);
                         }
                         else {
                             basket.splice(index, 1);
@@ -157,6 +145,7 @@ function clickDishCounter(basket, basketIdList) {
                 });
                 basketIdList.push(Number(dish.dataset.id));
             }
+            basketVisibility(basket, basketIdList);
         }
     });
 }

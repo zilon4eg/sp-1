@@ -66,10 +66,6 @@ body {
   height: 100px;
 }
 
-.dish_item-structure {
-  text-transform: lowercase;
-}
-
 .header_contacts {
   display: flex;
   flex-direction: column;
@@ -150,8 +146,38 @@ body {
   border-bottom: 2px solid #2e581f;
 }
 
+.side_menu-backet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10% 5%;
+  font-size: 20px;
+  color: #2e581f;
+}
+
+.side_menu-backet img {
+  margin-right: 15px;
+}
+
+.side_menu-backet-count {
+  font-size: 16px;
+  color: black;
+  box-sizing: border-box;
+  position: absolute;
+  left: 45px;
+  top: 10px;
+  background-color: #7bb928;
+  border: 2px solid #2e581f;
+  border-radius: 15px;
+  min-width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+}
+
 .dishes_list {
-  max-width: 85%;
+  width: 100%;
 }
 
 .dishes {
@@ -161,7 +187,8 @@ body {
 }
 
 .dish_item {
-  max-width: 15%;
+  max-width: 250px;
+  width: 15%;
   min-width: 160px;
   background-color: white;
   border: 1px solid darkgrey;
@@ -196,6 +223,7 @@ body {
 
 .dish_item-structure {
   font-size: 11px;
+  text-transform: lowercase;
 }
 
 .dish_item-weight-letter,
@@ -283,12 +311,10 @@ body {
 
 /* Видимость и невидимость блоков */
 
-.empty_dish_item {
-  display: none;
-}
-
 .dish_item-btn,
-.dish_item-counter {
+.dish_item-counter,
+.empty_basket,
+.empty_dish_item {
   display: none;
 }
 
