@@ -16,7 +16,8 @@ function clickSideMenu(data, basket, basketIdList) {
                 });
                 this.className = 'side_menu-list-active';
                 const dishes = document.querySelectorAll('.dish_item');
-                for (const dish in dishes) {
+                for (const dish of dishes) {
+                    console.log(dish);
                     dish.remove();
                 }
 
