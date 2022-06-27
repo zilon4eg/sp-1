@@ -1,4 +1,5 @@
 function fillDishesList(data, basket, basketIdList) {
+    console.log('fillDishesList');
     for (i=0; i<data.dishes.length; i++) {
         const dishIsVisible = Boolean(data.dishes[i].visible);
         const dishIsDelete = Boolean(data.dishes[i].deleted);
