@@ -211,6 +211,7 @@ function modalBasket(data, basket, basketIdList) {
             });
             document.querySelector('.modal_basket-result-price').textContent = resultPrice;
         }
+        orderBtn();
     });
 }
 
@@ -236,6 +237,24 @@ function createModalBasketList(data, basket, basketIdList) {
         basketForm.className = 'modal_basket-item';
     });
     document.querySelector('.modal_basket-result-price').textContent = resultPrice;
+}
+
+function orderBtn() {
+    const modalOrderBtn = document.querySelector('.modal_basket-btn');
+    modalOrderBtn.onclick = function(event) {
+        //производим действия
+        event.preventDefault();
+        const items = document.querySelectorAll('.modal_basket-item');
+        let body = 'Здравствуйте,\nПримите пожалуйста заказ:\n';
+        items.forEach(item => {
+            const title = item.querySelector('.modal_basket-item-title').textContent;
+            const count = item.querySelector('.modal_basket-item-counter-count').textContent;
+            body = body + `${title} - ${count}шт.\n`
+        });
+        
+        console.log(body);
+        window.open(`mailto:zakaz@sferapitania.ru?subject=Заказ&body=${encodeURIComponent(body)}`);
+    }
 }
 
 function sideMenuBasketBtn(data, basket, basketIdList) {

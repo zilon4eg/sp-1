@@ -2,31 +2,631 @@
 	"dishes": [
 		{
 			"id": 1,
-			"category": "наборы",
-			"title": "салат цезарь с цыпленком",
-			"description": "цыплёнок, пармезан, салат айсберг, черри, гренки, цезарь соус.",
-			"weight": 230,
-			"price": 299,
+			"category": "салаты",
+			"title": "Огурцы малосольные",
+			"description": "",
+			"weight": 100,
+			"price": 40,
 			"visible": true,
 			"deleted": false
 		},
 		{
 			"id": 2,
-			"category": "горячее",
-			"title": "фиш-н-чипс",
-			"description": "филе рыбы, острый кляр, картофель фри, соус для рыбы.",
-			"weight": 230,
-			"price": 279,
+			"category": "салаты",
+			"title": "Салат Винегрет",
+			"description": "",
+			"weight": 100,
+			"price": 60,
 			"visible": true,
 			"deleted": false
 		},
 		{
 			"id": 3,
-			"category": "наборы",
-			"title": "салат цезарь с цыпленком",
-			"description": "цыплёнок, пармезан, салат айсберг, черри, гренки, цезарь соус.",
-			"weight": 330,
-			"price": 499,
+			"category": "салаты",
+			"title": "Салат Греческий",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 4,
+			"category": "салаты",
+			"title": "Салат Дачный",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 5,
+			"category": "салаты",
+			"title": "Салат из ветчины с грибами",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 6,
+			"category": "салаты",
+			"title": "Салат из курицы с медово-горчичной заправкой",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 7,
+			"category": "салаты",
+			"title": "Салат из овощей и пряной зеленью",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 8,
+			"category": "салаты",
+			"title": "Салат из филе птицы под майонезом",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 9,
+			"category": "салаты",
+			"title": "Салат Микс из 5 овощей",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 10,
+			"category": "салаты",
+			"title": "Салат Оливье с курой",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 11,
+			"category": "салаты",
+			"title": "Салат Охотничий",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 12,
+			"category": "салаты",
+			"title": "Салат с говядиной и сладким перцем",
+			"description": "",
+			"weight": 100,
+			"price": 75,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 13,
+			"category": "салаты",
+			"title": "Салат Сельдь под шубой",
+			"description": "",
+			"weight": 100,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 13,
+			"category": "Горячие блюда",
+			"title": "Буженина из свинины",
+			"description": "",
+			"weight": 100,
+			"price": 150,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 14,
+			"category": "Горячие блюда",
+			"title": "Говядина тушенная в кисло-сладком соусе",
+			"description": "",
+			"weight": 150,
+			"price": 150,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 15,
+			"category": "Горячие блюда",
+			"title": "Горбуша запеченная под овощным жульеном",
+			"description": "",
+			"weight": 150,
+			"price": 160,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 16,
+			"category": "Горячие блюда",
+			"title": "Жареная рыба на подушечке из печеных овощей",
+			"description": "",
+			"weight": 150,
+			"price": 150,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 17,
+			"category": "Горячие блюда",
+			"title": "Котлета Пожарского",
+			"description": "",
+			"weight": 100,
+			"price": 80,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 18,
+			"category": "Горячие блюда",
+			"title": "Куриное филе в медово-горчичном соусе",
+			"description": "",
+			"weight": 150,
+			"price": 90,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 19,
+			"category": "Горячие блюда",
+			"title": "Куриное филе в сливочном соусе с песто",
+			"description": "",
+			"weight": 150,
+			"price": 90,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 20,
+			"category": "Горячие блюда",
+			"title": "Медальоны из свинины",
+			"description": "",
+			"weight": 100,
+			"price": 120,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 21,
+			"category": "Горячие блюда",
+			"title": "Окорок запеченный",
+			"description": "",
+			"weight": 190,
+			"price": 150,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 22,
+			"category": "Горячие блюда",
+			"title": "Перец фаршированный",
+			"description": "",
+			"weight": 200,
+			"price": 170,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 23,
+			"category": "Горячие блюда",
+			"title": "Плов с говядиной",
+			"description": "",
+			"weight": 200,
+			"price": 100,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 24,
+			"category": "Горячие блюда",
+			"title": "Рулет куриный с омлетом и овощами",
+			"description": "",
+			"weight": 100,
+			"price": 110,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 25,
+			"category": "Горячие блюда",
+			"title": "Свинина запеченная с помидорами",
+			"description": "",
+			"weight": 100,
+			"price": 130,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 26,
+			"category": "Горячие блюда",
+			"title": "Шашлык из свинины",
+			"description": "",
+			"weight": 100,
+			"price": 120,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 27,
+			"category": "Горячие блюда",
+			"title": "Шницель куриный",
+			"description": "",
+			"weight": 100,
+			"price": 100,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 28,
+			"category": "Гарниры",
+			"title": "Булгур с овощами",
+			"description": "",
+			"weight": 150,
+			"price": 55,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 29,
+			"category": "Гарниры",
+			"title": "Кабачки жареные",
+			"description": "",
+			"weight": 150,
+			"price": 50,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 30,
+			"category": "Гарниры",
+			"title": "Картофель Бейби",
+			"description": "",
+			"weight": 150,
+			"price": 30,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 31,
+			"category": "Гарниры",
+			"title": "Картофель запеченный",
+			"description": "",
+			"weight": 150,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 32,
+			"category": "Гарниры",
+			"title": "Овощи паровые в сливочном соусе песто",
+			"description": "",
+			"weight": 150,
+			"price": 80,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 33,
+			"category": "Гарниры",
+			"title": "Печеные овощи с пряными травами",
+			"description": "",
+			"weight": 150,
+			"price": 100,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 34,
+			"category": "Гарниры",
+			"title": "Рис с овощами и зеленью",
+			"description": "",
+			"weight": 150,
+			"price": 45,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 35,
+			"category": "Соуса",
+			"title": "Соус Кисло-сладкий ПФ",
+			"description": "",
+			"weight": 100,
+			"price": 50,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 36,
+			"category": "Соуса",
+			"title": "Соус Медово-горчичный ПФ",
+			"description": "",
+			"weight": 100,
+			"price": 50,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 37,
+			"category": "Соуса",
+			"title": "Соус Томатный ПФ",
+			"description": "",
+			"weight": 100,
+			"price": 50,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 38,
+			"category": "Соуса",
+			"title": "Соус Шашлычный ПФ",
+			"description": "",
+			"weight": 100,
+			"price": 50,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 39,
+			"category": "Напитки",
+			"title": "Морс Брусничный",
+			"description": "",
+			"weight": 1000,
+			"price": 200,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 40,
+			"category": "Напитки",
+			"title": "Морс Клюквенный",
+			"description": "",
+			"weight": 1000,
+			"price": 200,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 41,
+			"category": "Выпечка и десерты",
+			"title": "Беляш с мясом",
+			"description": "",
+			"weight": "порция",
+			"price": 55,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 42,
+			"category": "Выпечка и десерты",
+			"title": "Блины с курой",
+			"description": "",
+			"weight": "порция",
+			"price": 45,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 43,
+			"category": "Выпечка и десерты",
+			"title": "Блины с мясом",
+			"description": "",
+			"weight": "порция",
+			"price": 55,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 43,
+			"category": "Выпечка и десерты",
+			"title": "Брускетта мясная",
+			"description": "",
+			"weight": 35,
+			"price": 55,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 44,
+			"category": "Выпечка и десерты",
+			"title": "Брускетта с лососем",
+			"description": "",
+			"weight": 35,
+			"price": 120,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 45,
+			"category": "Выпечка и десерты",
+			"title": "Брускетта с печенными овощами",
+			"description": "",
+			"weight": 35,
+			"price": 120,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 46,
+			"category": "Выпечка и десерты",
+			"title": "Киш с курой и грибами",
+			"description": "",
+			"weight": 1000,
+			"price": 750,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 47,
+			"category": "Выпечка и десерты",
+			"title": "Киш с овощами",
+			"description": "",
+			"weight": 1000,
+			"price": 600,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 48,
+			"category": "Выпечка и десерты",
+			"title": "Кулебяка с говядиной",
+			"description": "",
+			"weight": 1000,
+			"price": 800,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 49,
+			"category": "Выпечка и десерты",
+			"title": "Пирог с вишней",
+			"description": "",
+			"weight": 1000,
+			"price": 950,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 50,
+			"category": "Выпечка и десерты",
+			"title": "Пирог с яблоком",
+			"description": "",
+			"weight": 1000,
+			"price": 250,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 51,
+			"category": "Выпечка и десерты",
+			"title": "Пирог Яблочный (тортилья)",
+			"description": "",
+			"weight": 1000,
+			"price": 600,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 52,
+			"category": "Выпечка и десерты",
+			"title": "Пирожок с капустой",
+			"description": "",
+			"weight": "порция",
+			"price": 35,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 53,
+			"category": "Выпечка и десерты",
+			"title": "Пирожок с картофелем и грибами",
+			"description": "",
+			"weight": "порция",
+			"price": 35,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 54,
+			"category": "Выпечка и десерты",
+			"title": "Торт Медовик",
+			"description": "",
+			"weight": 1000,
+			"price": 1500,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 55,
+			"category": "Выпечка и десерты",
+			"title": "Торт Наполеон",
+			"description": "",
+			"weight": 1000,
+			"price": 1700,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 56,
+			"category": "Выпечка и десерты",
+			"title": "Шарлотка из яблок",
+			"description": "",
+			"weight": 1000,
+			"price": 400,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 57,
+			"category": "Выпечка и десерты",
+			"title": "Эклер",
+			"description": "",
+			"weight": "порция",
+			"price": 50,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 58,
+			"category": "Шашлык",
+			"title": "Шашлык из курицы ПФ",
+			"description": "",
+			"weight": 1000,
+			"price": 750,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 59,
+			"category": "Шашлык",
+			"title": "Шашлык из свинины ПФ",
+			"description": "",
+			"weight": 1000,
+			"price": 1200,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 59,
+			"category": "Шашлык",
+			"title": "Шашлык мясной ассорти ПФ",
+			"description": "",
+			"weight": 1000,
+			"price": 1250,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 59,
+			"category": "Шашлык",
+			"title": "Шашлык овощной ассорти ПФ",
+			"description": "",
+			"weight": 1000,
+			"price": 550,
 			"visible": true,
 			"deleted": false
 		}
