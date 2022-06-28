@@ -131,7 +131,7 @@
 			"deleted": false
 		},
 		{
-			"id": 13,
+			"id": 14,
 			"category": "Горячие блюда",
 			"title": "Буженина из свинины",
 			"description": "",
@@ -141,7 +141,7 @@
 			"deleted": false
 		},
 		{
-			"id": 14,
+			"id": 15,
 			"category": "Горячие блюда",
 			"title": "Говядина тушенная в кисло-сладком соусе",
 			"description": "",
@@ -151,7 +151,7 @@
 			"deleted": false
 		},
 		{
-			"id": 15,
+			"id": 16,
 			"category": "Горячие блюда",
 			"title": "Горбуша запеченная под овощным жульеном",
 			"description": "",
@@ -161,7 +161,7 @@
 			"deleted": false
 		},
 		{
-			"id": 16,
+			"id": 17,
 			"category": "Горячие блюда",
 			"title": "Жареная рыба на подушечке из печеных овощей",
 			"description": "",
@@ -171,7 +171,7 @@
 			"deleted": false
 		},
 		{
-			"id": 17,
+			"id": 18,
 			"category": "Горячие блюда",
 			"title": "Котлета Пожарского",
 			"description": "",
@@ -181,7 +181,7 @@
 			"deleted": false
 		},
 		{
-			"id": 18,
+			"id": 19,
 			"category": "Горячие блюда",
 			"title": "Куриное филе в медово-горчичном соусе",
 			"description": "",
@@ -191,7 +191,7 @@
 			"deleted": false
 		},
 		{
-			"id": 19,
+			"id": 20,
 			"category": "Горячие блюда",
 			"title": "Куриное филе в сливочном соусе с песто",
 			"description": "",
@@ -201,7 +201,7 @@
 			"deleted": false
 		},
 		{
-			"id": 20,
+			"id": 21,
 			"category": "Горячие блюда",
 			"title": "Медальоны из свинины",
 			"description": "",
@@ -211,7 +211,7 @@
 			"deleted": false
 		},
 		{
-			"id": 21,
+			"id": 22,
 			"category": "Горячие блюда",
 			"title": "Окорок запеченный",
 			"description": "",
@@ -221,7 +221,7 @@
 			"deleted": false
 		},
 		{
-			"id": 22,
+			"id": 23,
 			"category": "Горячие блюда",
 			"title": "Перец фаршированный",
 			"description": "",
@@ -231,7 +231,7 @@
 			"deleted": false
 		},
 		{
-			"id": 23,
+			"id": 24,
 			"category": "Горячие блюда",
 			"title": "Плов с говядиной",
 			"description": "",
@@ -241,7 +241,7 @@
 			"deleted": false
 		},
 		{
-			"id": 24,
+			"id": 25,
 			"category": "Горячие блюда",
 			"title": "Рулет куриный с омлетом и овощами",
 			"description": "",
@@ -251,7 +251,7 @@
 			"deleted": false
 		},
 		{
-			"id": 25,
+			"id": 26,
 			"category": "Горячие блюда",
 			"title": "Свинина запеченная с помидорами",
 			"description": "",
@@ -261,7 +261,7 @@
 			"deleted": false
 		},
 		{
-			"id": 26,
+			"id": 27,
 			"category": "Горячие блюда",
 			"title": "Шашлык из свинины",
 			"description": "",
@@ -271,7 +271,7 @@
 			"deleted": false
 		},
 		{
-			"id": 27,
+			"id": 28,
 			"category": "Горячие блюда",
 			"title": "Шницель куриный",
 			"description": "",
@@ -281,7 +281,7 @@
 			"deleted": false
 		},
 		{
-			"id": 28,
+			"id": 29,
 			"category": "Гарниры",
 			"title": "Булгур с овощами",
 			"description": "",
@@ -291,7 +291,7 @@
 			"deleted": false
 		},
 		{
-			"id": 29,
+			"id": 30,
 			"category": "Гарниры",
 			"title": "Кабачки жареные",
 			"description": "",
@@ -301,7 +301,7 @@
 			"deleted": false
 		},
 		{
-			"id": 30,
+			"id": 31,
 			"category": "Гарниры",
 			"title": "Картофель Бейби",
 			"description": "",
@@ -311,7 +311,7 @@
 			"deleted": false
 		},
 		{
-			"id": 31,
+			"id": 32,
 			"category": "Гарниры",
 			"title": "Картофель запеченный",
 			"description": "",
@@ -321,7 +321,7 @@
 			"deleted": false
 		},
 		{
-			"id": 32,
+			"id": 33,
 			"category": "Гарниры",
 			"title": "Овощи паровые в сливочном соусе песто",
 			"description": "",
@@ -331,7 +331,7 @@
 			"deleted": false
 		},
 		{
-			"id": 33,
+			"id": 34,
 			"category": "Гарниры",
 			"title": "Печеные овощи с пряными травами",
 			"description": "",
@@ -341,7 +341,7 @@
 			"deleted": false
 		},
 		{
-			"id": 34,
+			"id": 35,
 			"category": "Гарниры",
 			"title": "Рис с овощами и зеленью",
 			"description": "",
@@ -351,7 +351,7 @@
 			"deleted": false
 		},
 		{
-			"id": 35,
+			"id": 36,
 			"category": "Соуса",
 			"title": "Соус Кисло-сладкий ПФ",
 			"description": "",
@@ -361,7 +361,7 @@
 			"deleted": false
 		},
 		{
-			"id": 36,
+			"id": 37,
 			"category": "Соуса",
 			"title": "Соус Медово-горчичный ПФ",
 			"description": "",
@@ -371,7 +371,7 @@
 			"deleted": false
 		},
 		{
-			"id": 37,
+			"id": 38,
 			"category": "Соуса",
 			"title": "Соус Томатный ПФ",
 			"description": "",
@@ -381,7 +381,7 @@
 			"deleted": false
 		},
 		{
-			"id": 38,
+			"id": 39,
 			"category": "Соуса",
 			"title": "Соус Шашлычный ПФ",
 			"description": "",
@@ -391,7 +391,7 @@
 			"deleted": false
 		},
 		{
-			"id": 39,
+			"id": 40,
 			"category": "Напитки",
 			"title": "Морс Брусничный",
 			"description": "",
@@ -401,7 +401,7 @@
 			"deleted": false
 		},
 		{
-			"id": 40,
+			"id": 41,
 			"category": "Напитки",
 			"title": "Морс Клюквенный",
 			"description": "",
@@ -411,7 +411,7 @@
 			"deleted": false
 		},
 		{
-			"id": 41,
+			"id": 42,
 			"category": "Выпечка и десерты",
 			"title": "Беляш с мясом",
 			"description": "",
@@ -421,7 +421,7 @@
 			"deleted": false
 		},
 		{
-			"id": 42,
+			"id": 43,
 			"category": "Выпечка и десерты",
 			"title": "Блины с курой",
 			"description": "",
@@ -431,7 +431,7 @@
 			"deleted": false
 		},
 		{
-			"id": 43,
+			"id": 44,
 			"category": "Выпечка и десерты",
 			"title": "Блины с мясом",
 			"description": "",
@@ -441,7 +441,7 @@
 			"deleted": false
 		},
 		{
-			"id": 43,
+			"id": 45,
 			"category": "Выпечка и десерты",
 			"title": "Брускетта мясная",
 			"description": "",
@@ -451,7 +451,7 @@
 			"deleted": false
 		},
 		{
-			"id": 44,
+			"id": 46,
 			"category": "Выпечка и десерты",
 			"title": "Брускетта с лососем",
 			"description": "",
@@ -461,7 +461,7 @@
 			"deleted": false
 		},
 		{
-			"id": 45,
+			"id": 47,
 			"category": "Выпечка и десерты",
 			"title": "Брускетта с печенными овощами",
 			"description": "",
@@ -471,7 +471,7 @@
 			"deleted": false
 		},
 		{
-			"id": 46,
+			"id": 48,
 			"category": "Выпечка и десерты",
 			"title": "Киш с курой и грибами",
 			"description": "",
@@ -481,7 +481,7 @@
 			"deleted": false
 		},
 		{
-			"id": 47,
+			"id": 49,
 			"category": "Выпечка и десерты",
 			"title": "Киш с овощами",
 			"description": "",
@@ -491,7 +491,7 @@
 			"deleted": false
 		},
 		{
-			"id": 48,
+			"id": 50,
 			"category": "Выпечка и десерты",
 			"title": "Кулебяка с говядиной",
 			"description": "",
@@ -501,7 +501,7 @@
 			"deleted": false
 		},
 		{
-			"id": 49,
+			"id": 51,
 			"category": "Выпечка и десерты",
 			"title": "Пирог с вишней",
 			"description": "",
@@ -511,7 +511,7 @@
 			"deleted": false
 		},
 		{
-			"id": 50,
+			"id": 52,
 			"category": "Выпечка и десерты",
 			"title": "Пирог с яблоком",
 			"description": "",
@@ -521,7 +521,7 @@
 			"deleted": false
 		},
 		{
-			"id": 51,
+			"id": 53,
 			"category": "Выпечка и десерты",
 			"title": "Пирог Яблочный (тортилья)",
 			"description": "",
@@ -531,7 +531,7 @@
 			"deleted": false
 		},
 		{
-			"id": 52,
+			"id": 54,
 			"category": "Выпечка и десерты",
 			"title": "Пирожок с капустой",
 			"description": "",
@@ -541,7 +541,7 @@
 			"deleted": false
 		},
 		{
-			"id": 53,
+			"id": 55,
 			"category": "Выпечка и десерты",
 			"title": "Пирожок с картофелем и грибами",
 			"description": "",
@@ -551,7 +551,7 @@
 			"deleted": false
 		},
 		{
-			"id": 54,
+			"id": 56,
 			"category": "Выпечка и десерты",
 			"title": "Торт Медовик",
 			"description": "",
@@ -561,7 +561,7 @@
 			"deleted": false
 		},
 		{
-			"id": 55,
+			"id": 57,
 			"category": "Выпечка и десерты",
 			"title": "Торт Наполеон",
 			"description": "",
@@ -571,7 +571,7 @@
 			"deleted": false
 		},
 		{
-			"id": 56,
+			"id": 58,
 			"category": "Выпечка и десерты",
 			"title": "Шарлотка из яблок",
 			"description": "",
@@ -581,7 +581,7 @@
 			"deleted": false
 		},
 		{
-			"id": 57,
+			"id": 59,
 			"category": "Выпечка и десерты",
 			"title": "Эклер",
 			"description": "",
@@ -591,7 +591,7 @@
 			"deleted": false
 		},
 		{
-			"id": 58,
+			"id": 60,
 			"category": "Шашлык",
 			"title": "Шашлык из курицы ПФ",
 			"description": "",
@@ -601,7 +601,7 @@
 			"deleted": false
 		},
 		{
-			"id": 59,
+			"id": 61,
 			"category": "Шашлык",
 			"title": "Шашлык из свинины ПФ",
 			"description": "",
@@ -611,7 +611,7 @@
 			"deleted": false
 		},
 		{
-			"id": 59,
+			"id": 62,
 			"category": "Шашлык",
 			"title": "Шашлык мясной ассорти ПФ",
 			"description": "",
@@ -621,12 +621,32 @@
 			"deleted": false
 		},
 		{
-			"id": 59,
+			"id": 63,
 			"category": "Шашлык",
 			"title": "Шашлык овощной ассорти ПФ",
 			"description": "",
 			"weight": 1000,
 			"price": 550,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 64,
+			"category": "Горячие блюда",
+			"title": "Плов с курицей",
+			"description": "",
+			"weight": 200,
+			"price": 80,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 65,
+			"category": "Рагу овощное",
+			"title": "Плов с курицей",
+			"description": "",
+			"weight": 150,
+			"price": 60,
 			"visible": true,
 			"deleted": false
 		}

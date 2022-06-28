@@ -30,6 +30,7 @@ function fillDishesList(data, basket, basketIdList) {
                 // dish.style.display = 'none';
                 dish.className = 'dish_item';
                 dish.dataset.id = data.dishes[i].id;
+                dish.querySelector('.dish_item-img').src = `../sp/img/dishes/${data.dishes[i].id}.jpeg`;
                 dish.querySelector('.dish_item-title').textContent = data.dishes[i].title;
                 dish.querySelector('.dish_item-weight-number').textContent = data.dishes[i].weight;
                 dish.querySelector('.dish_item-structure').textContent = data.dishes[i].description;
@@ -225,6 +226,7 @@ function createModalBasketList(data, basket, basketIdList) {
         basketForm.querySelector('.modal_basket-item-counter-count').textContent = el.count;
         for (i=0; i<data.dishes.length; i++) {
             if (Number(data.dishes[i].id) === Number(el.id)) {
+                basketForm.querySelector('.modal_basket-item-img img').src = `../sp/img/dishes/${data.dishes[i].id}.jpeg`;
                 basketForm.querySelector('.modal_basket-item-title').textContent = data.dishes[i].title;
                 basketForm.querySelector('.modal_basket-item-structure').textContent = data.dishes[i].description;
                 basketForm.querySelector('.modal_basket-item-weight-number').textContent = data.dishes[i].weight;
@@ -252,7 +254,6 @@ function orderBtn() {
             body = body + `${title} - ${count}шт.\n`
         });
         
-        console.log(body);
         window.open(`mailto:zakaz@sferapitania.ru?subject=Заказ&body=${encodeURIComponent(body)}`);
     }
 }
@@ -287,7 +288,6 @@ function sideMenuBasketBtn(data, basket, basketIdList) {
 
     const response = await fetch(dataUrl);
     const data = await response.json();  // читаем ответ в формате JSON
-    console.log(data);
 
     var basket = [];  // корзина
     var basketIdList = [];

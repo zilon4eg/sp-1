@@ -89,7 +89,6 @@ body {
 .side_menu {
   min-width: 200px;
   font-weight: bold;
-  text-transform: capitalize;
   background-color: GhostWhite;
   box-shadow: 0 0 7px #444;
   font-style: italic;
@@ -206,8 +205,9 @@ body {
 }
 
 .dish_item-img {
-  width: 100%;
+  height: 180px;
   border-radius: 14px 14px 0 0;
+  object-fit: cover;
 }
 
 .dish_item-title {
@@ -351,6 +351,7 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 5%;
+  overflow: auto;
 }
 
 .modal_basket-item {
