@@ -150,6 +150,106 @@ function clickDishCounter(basket, basketIdList) {
     });
 }
 
+function modalBasket(data, basket, basketIdList) {
+    const modalClose = document.querySelector('.modal_basket-close');
+    const modalBasketWindow = document.querySelector('.modal_basket');
+    modalClose.onclick = function(event) {
+        //производим действия
+        event.preventDefault();
+        modalBasketWindow.classList.remove('modal_basket-visible');
+        const modalBasketItems = document.querySelectorAll('.modal_basket-item');
+        for (let item of modalBasketItems) {
+            item.remove();
+        }
+        const dishItems = document.querySelectorAll('.dish_item');
+        for (let dish of dishItems) {
+            dish.remove();
+        }
+        fillDishesList(data, basket, basketIdList);
+    }
+
+    const modalCounter = document.querySelectorAll('.modal_basket-item-counter svg');
+    modalCounter.forEach(function(el) {
+        //вешаем событие
+        el.onclick = function(event) {
+            //производим действия
+            event.preventDefault();
+            const count = this.closest('.modal_basket-item-counter').querySelector('.modal_basket-item-counter-count');
+            if (this.classList.value.includes('modal_basket-item-counter-inc')) {
+                count.textContent = Number(count.textContent) + 1;
+            }
+            else {
+                count.textContent = Number(count.textContent) - 1;
+            }
+
+            const modalPrice = this.closest('.modal_basket-item').querySelector('.modal_basket-item-price-number');
+            for (i=0; i<data.dishes.length; i++) {
+                if (Number(data.dishes[i].id) === Number(this.closest('.modal_basket-item').dataset.id)) {
+                    const price = Number(data.dishes[i].price) * Number(count.textContent);
+                    modalPrice.textContent = price;
+                }
+            }
+
+            const modalBasketItem = this.closest('.modal_basket-item');
+            basket.forEach((item, index, array) => {
+                if (item.id === Number(modalBasketItem.dataset.id)) {
+                    if (count.textContent > 0) {
+                        item.count = Number(count.textContent);
+                    }
+                    else {
+                        basket.splice(index, 1);
+                        basketIdList.splice(index, 1);
+                        modalBasketItem.remove();
+                    }
+                }
+            });
+        }
+    });
+}
+
+function createModalBasketList(data, basket, basketIdList) {
+    const emptyBasketForm = document.querySelector('.empty_modal_basket-item').cloneNode(true);
+    basket.forEach(el => {
+        document.querySelector('.modal_basket-list').appendChild(emptyBasketForm);
+        const basketForm = document.querySelector('.empty_modal_basket-item');
+        basketForm.dataset.id = el.id;
+        basketForm.querySelector('.modal_basket-item-counter-count').textContent = el.count;
+        for (i=0; i<data.dishes.length; i++) {
+            if (Number(data.dishes[i].id) === Number(el.id)) {
+                basketForm.querySelector('.modal_basket-item-title').textContent = data.dishes[i].title;
+                basketForm.querySelector('.modal_basket-item-structure').textContent = data.dishes[i].description;
+                basketForm.querySelector('.modal_basket-item-weight-number').textContent = data.dishes[i].weight;
+                const price = Number(data.dishes[i].price) * Number(el.count);
+                basketForm.querySelector('.modal_basket-item-price-number').textContent = price;
+            }
+        }
+        basketForm.className = 'modal_basket-item';
+    });
+}
+
+function sideMenuBasketBtn(data, basket, basketIdList) {
+    const modalBasketWindow = document.querySelector('.modal_basket');
+
+    const basketBtn = document.querySelector('.side_menu-backet');
+    basketBtn.onclick = function(event) {
+        //производим действия
+        event.preventDefault();
+        modalBasketWindow.classList.add('modal_basket-visible');
+        createModalBasketList(data, basket, basketIdList);
+        modalBasket(data, basket, basketIdList);
+    }
+
+    const basketCount = document.querySelector('.side_menu-backet-count');
+    basketCount.onclick = function(event) {
+        //производим действия
+        event.preventDefault();
+        modalBasketWindow.classList.add('modal_basket-visible');
+        createModalBasketList(data, basket, basketIdList);
+        modalBasket(data, basket, basketIdList);
+    }
+}
+
+
 (async () => {
     const baseUrl = 'https://zilon4eg.github.io/sp/';
     const filePath = 'data/dishes.json';
@@ -166,4 +266,5 @@ function clickDishCounter(basket, basketIdList) {
     clickSideMenu(data, basket, basketIdList);
     clickBuyBtn(basket, basketIdList);
     clickDishCounter(basket, basketIdList);
+    sideMenuBasketBtn(data, basket, basketIdList);
   })()

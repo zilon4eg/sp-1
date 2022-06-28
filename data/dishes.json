@@ -19,6 +19,16 @@
 			"price": 279,
 			"visible": true,
 			"deleted": false
+		},
+		{
+			"id": 3,
+			"category": "наборы",
+			"title": "салат цезарь с цыпленком",
+			"description": "цыплёнок, пармезан, салат айсберг, черри, гренки, цезарь соус.",
+			"weight": 330,
+			"price": 499,
+			"visible": true,
+			"deleted": false
 		}
 	]
 }
