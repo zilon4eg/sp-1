@@ -10,6 +10,51 @@
     <link rel="icon" href="../sp/favicon.ico"/>
 </head>
 <body>
+    <div class="modal_basket">
+        <div class="modal_basket_content">
+            <div class="modal_basket-close">
+                <svg viewBox="0 0 50 50" class="modal_basket-item-counter-inc">
+                    <line x1="5" y1="5" x2="45" y2="45" stroke-width="8" stroke="black" stroke-linecap="round"/>
+                    <line x1="45" y1="5" x2="5" y2="45" stroke-width="8" stroke="black" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="modal_basket-list">
+                <div class="empty_modal_basket-item" data-id="0">
+                    <div class="modal_basket-item-img">
+                        <img src="../sp/img/dishes/salad.jpg">
+                    </div>
+                    <div class="modal_basket-item-description">
+                        <div class="modal_basket-item-title">
+                            Название блюда
+                        </div>
+                        <div class="modal_basket-item-structure">
+                            Описание блюда
+                        </div>
+                        <div class="modal_basket-item-weight">
+                            <div class="modal_basket-item-weight-number">0</div>
+                            <div class="modal_basket-item-weight-letter">г</div>
+                        </div>
+                    </div>
+                    <div class="modal_basket-item-counter">
+                        <svg viewBox="0 0 100 100" class="modal_basket-item-counter-dec">
+                            <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
+                        </svg>
+                        <div class="modal_basket-item-counter-count">1</div>
+                        <svg viewBox="0 0 100 100" class="modal_basket-item-counter-inc">
+                            <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
+                            <line x1="60" y1="5" x2="40" y2="95" stroke-width="9" stroke="black" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="modal_basket-item-price">
+                        <div class="modal_basket-item-price-number">0</div>
+                        <div class="modal_basket-item-price-letter">&#8381;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <header class="header">
         <div>
             <a href="https://zilon4eg.github.io/sp/"><img class="header_logo" src="../sp/img/logo/sp-logo.png" alt="Сфера Питания"></a>
@@ -72,20 +117,6 @@
         </article>
     </div>
     
-
-
-    <!-- <div class="modal" id="modal_main">
-        <div class="modal__content">
-            <div class="modal__close modal__close_times">&times;</div>
-            <a href="#" class="btn btn_danger modal__close show-success">Сделать хорошо</a>
-        </div>
-    </div>
-    <div class="modal" id="modal_success">
-        <div class="modal__content">
-            <div class="modal__close modal__close_times">&times;</div>
-            <a href="#" class="btn btn_success">Хорошо сделано!</a>
-        </div>
-    </div> -->
 
 
     <script type="text/javascript" src="../sp/js/main.js"></script>
