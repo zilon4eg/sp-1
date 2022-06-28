@@ -27,7 +27,7 @@ function fillDishesList(data, basket, basketIdList) {
                 document.querySelector('.dishes').appendChild(emptyDishForm);
 
                 const dish = document.querySelector('.empty_dish_item');
-                dish.style.display = 'none';
+                // dish.style.display = 'none';
                 dish.className = 'dish_item';
                 dish.dataset.id = data.dishes[i].id;
                 dish.querySelector('.dish_item-title').textContent = data.dishes[i].title;
@@ -43,7 +43,7 @@ function fillDishesList(data, basket, basketIdList) {
                         }
                     });
                 }
-                dish.style.display = 'flex';
+                // dish.style.display = 'flex';
             }
         }
     }
@@ -203,13 +203,21 @@ function modalBasket(data, basket, basketIdList) {
                     }
                 }
             });
+
+            const allElements = document.querySelectorAll('.modal_basket-item');
+            let resultPrice = 0;
+            allElements.forEach(el => {
+                resultPrice += Number(el.querySelector('.modal_basket-item-price-number').textContent);
+            });
+            document.querySelector('.modal_basket-result-price').textContent = resultPrice;
         }
     });
 }
 
 function createModalBasketList(data, basket, basketIdList) {
-    const emptyBasketForm = document.querySelector('.empty_modal_basket-item').cloneNode(true);
+    let resultPrice = 0;
     basket.forEach(el => {
+        const emptyBasketForm = document.querySelector('.empty_modal_basket-item').cloneNode(true);
         document.querySelector('.modal_basket-list').appendChild(emptyBasketForm);
         const basketForm = document.querySelector('.empty_modal_basket-item');
         basketForm.dataset.id = el.id;
@@ -221,10 +229,13 @@ function createModalBasketList(data, basket, basketIdList) {
                 basketForm.querySelector('.modal_basket-item-weight-number').textContent = data.dishes[i].weight;
                 const price = Number(data.dishes[i].price) * Number(el.count);
                 basketForm.querySelector('.modal_basket-item-price-number').textContent = price;
+                resultPrice += price;
+                break;
             }
         }
         basketForm.className = 'modal_basket-item';
     });
+    document.querySelector('.modal_basket-result-price').textContent = resultPrice;
 }
 
 function sideMenuBasketBtn(data, basket, basketIdList) {
