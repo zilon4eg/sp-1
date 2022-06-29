@@ -30,7 +30,12 @@ function fillDishesList(data, basket, basketIdList) {
                 // dish.style.display = 'none';
                 dish.className = 'dish_item';
                 dish.dataset.id = data.dishes[i].id;
-                dish.querySelector('.dish_item-img').src = `../sp/img/dishes/${data.dishes[i].id}.jpeg`;
+                try {
+                    dish.querySelector('.dish_item-img').src = `../sp/img/dishes/${data.dishes[i].id}.jpeg`;
+                }
+                catch {
+                    dish.querySelector('.dish_item-img').src = `../sp/img/dishes/no_image-800x800.png`;
+                }
                 dish.querySelector('.dish_item-title').textContent = data.dishes[i].title;
                 dish.querySelector('.dish_item-weight-number').textContent = data.dishes[i].weight;
                 dish.querySelector('.dish_item-structure').textContent = data.dishes[i].description;
@@ -228,7 +233,7 @@ function modalBasket(data, basket, basketIdList) {
             document.querySelector('.modal_basket-result-price').textContent = resultPrice;
 
         }
-        orderBtn();
+        // orderBtn();
     });
 }
 
@@ -242,7 +247,12 @@ function createModalBasketList(data, basket, basketIdList) {
         basketForm.querySelector('.modal_basket-item-counter-count').textContent = el.count;
         for (i=0; i<data.dishes.length; i++) {
             if (Number(data.dishes[i].id) === Number(el.id)) {
-                basketForm.querySelector('.modal_basket-item-img img').src = `../sp/img/dishes/${data.dishes[i].id}.jpeg`;
+                try {
+                    basketForm.querySelector('.modal_basket-item-img img').src = `../sp/img/dishes/${data.dishes[i].id}.jpeg`;
+                }
+                catch {
+                    basketForm.querySelector('.modal_basket-item-img img').src = `../sp/img/dishes/no_image-800x800.png`;
+                }
                 basketForm.querySelector('.modal_basket-item-title').textContent = data.dishes[i].title;
                 basketForm.querySelector('.modal_basket-item-structure').textContent = data.dishes[i].description;
                 basketForm.querySelector('.modal_basket-item-weight-number').textContent = data.dishes[i].weight;
@@ -257,22 +267,22 @@ function createModalBasketList(data, basket, basketIdList) {
     document.querySelector('.modal_basket-result-price').textContent = resultPrice;
 }
 
-function orderBtn() {
-    const modalOrderBtn = document.querySelector('.modal_basket-btn');
-    modalOrderBtn.onclick = function(event) {
-        //производим действия
-        event.preventDefault();
-        const items = document.querySelectorAll('.modal_basket-item');
-        let body = 'Здравствуйте,\nПримите пожалуйста заказ:\n';
-        items.forEach(item => {
-            const title = item.querySelector('.modal_basket-item-title').textContent;
-            const count = item.querySelector('.modal_basket-item-counter-count').textContent;
-            body = body + `${title} - ${count}шт.\n`
-        });
+// function orderBtn() {
+//     const modalOrderBtn = document.querySelector('.modal_basket-btn');
+//     modalOrderBtn.onclick = function(event) {
+//         //производим действия
+//         event.preventDefault();
+//         const items = document.querySelectorAll('.modal_basket-item');
+//         let body = 'Здравствуйте,\nПримите пожалуйста заказ:\n';
+//         items.forEach(item => {
+//             const title = item.querySelector('.modal_basket-item-title').textContent;
+//             const count = item.querySelector('.modal_basket-item-counter-count').textContent;
+//             body = body + `${title} - ${count}шт.\n`
+//         });
         
-        window.open(`mailto:zakaz@sferapitania.ru?subject=Заказ&body=${encodeURIComponent(body)}`);
-    }
-}
+//         window.open(`mailto:zakaz@sferapitania.ru?subject=Заказ&body=${encodeURIComponent(body)}`);
+//     }
+// }
 
 function correctSiteSize() {
     const modWindowSize = document.querySelector('.modal_basket_content').offsetHeight;

@@ -383,6 +383,10 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: 15px;
+  background-image: url('../img/dishes/no_image-800x800.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .modal_basket-item-description {
