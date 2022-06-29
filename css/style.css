@@ -188,7 +188,7 @@ body {
 .dish_item {
   max-width: 250px;
   width: 15%;
-  min-width: 160px;
+  min-width: 180px;
   background-color: white;
   border: 1px solid darkgrey;
   border-radius: 15px;
@@ -208,6 +208,10 @@ body {
   height: 180px;
   border-radius: 14px 14px 0 0;
   object-fit: cover;
+  background-image: url('../img/dishes/no_image-800x800.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .dish_item-title {
@@ -250,7 +254,7 @@ body {
 
 .dish_item-btn {
   height: 60%;
-  width: 40%;
+  width: 90px;
   min-width: 68px;
   min-height: 20px;
   padding: 0;
@@ -275,7 +279,7 @@ body {
 
 .dish_item-counter {
   height: 60%;
-  width: 40%;
+  width: 90px;
   min-width: 68px;
   min-height: 20px;
   border: 1px solid black;
@@ -343,7 +347,7 @@ body {
   background-color: #e3faec;
   transition: 0.3s all;
   z-index: 2;
-  margin: 5%;
+  top: 50px;
 }
 
 .modal_basket-list {
@@ -351,7 +355,6 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 5%;
-  overflow: auto;
 }
 
 .modal_basket-item {
