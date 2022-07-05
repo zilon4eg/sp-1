@@ -20,7 +20,6 @@ html {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  height: 100%;
 }
 
 body {
@@ -31,13 +30,11 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  height: 100%;
 }
 
 .middle_block::before {
   content: '';
   width: 100%;
-  height: 100%;
   background-image: url('../img/background/main-bg.jpg');
   background-repeat: repeat;
   background-position: left top;
@@ -50,16 +47,19 @@ body {
 }
 
 .header {
-  width: 98%;
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   padding: 3px 1% 0;
   background-color: #becfc5;
   box-shadow: 0 0 7px #444;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .header_logo {
@@ -81,10 +81,11 @@ body {
 
 .middle_block {
   height: 100%;
-  min-height: 673px;
   display: flex;
   flex-wrap: nowrap;
 }
+
+.side_menu-basket-mobile {display: none;}
 
 .side_menu {
   min-width: 200px;
@@ -92,10 +93,44 @@ body {
   background-color: GhostWhite;
   box-shadow: 0 0 7px #444;
   font-style: italic;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .side_menu-title {
-  padding: 10%;
+  padding: 5%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* justify-content: center; */
+  height: 50px;
+}
+
+.side_menu-burger {
+  box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  /* background-color: #becfc5; */
+  margin-right: 15px;
+  /* border-radius: 50%; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* align-items: center; */
+  /* box-shadow: 0 0 7px #444; */
+  padding: 5%;
+}
+
+.burger_top,
+.burger_middle,
+.burger_bottom {
+  width: 25px;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 2px;
 }
 
 .side_menu-title h3 {
@@ -145,20 +180,26 @@ body {
   border-bottom: 2px solid #2e581f;
 }
 
-.side_menu-backet {
-  position: relative;
+.side_menu-basket {
   display: flex;
   align-items: center;
-  padding: 10% 5%;
+  padding: 10px 5%;
   font-size: 20px;
   color: #2e581f;
+  margin-top: auto;
+  position: sticky;
+  bottom: 5px;
+  background-color: #becfc5;
+  box-shadow: 0 0 7px #444;
+  margin: auto 5px 5px;
+  border-radius: 15px;
 }
 
-.side_menu-backet img {
+.side_menu-basket img {
   margin-right: 15px;
 }
 
-.side_menu-backet-count {
+.side_menu-basket-count {
   font-size: 16px;
   color: black;
   box-sizing: border-box;
@@ -187,7 +228,7 @@ body {
 
 .dish_item {
   max-width: 250px;
-  width: 15%;
+  width: 14%;
   min-width: 180px;
   background-color: white;
   border: 1px solid darkgrey;
@@ -316,7 +357,7 @@ body {
   text-transform: uppercase;
 }
 
-.modal_basket::before {
+.modal_windows::before {
   content: '';
   width: 100%;
   height: 100%;
@@ -326,10 +367,10 @@ body {
   top: 0;
   left: 0;
   opacity: 0.7;
-  z-index: 1;
+  z-index: 2;
 }
 
-.modal_basket {
+.modal_windows {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +379,7 @@ body {
   position: absolute;
 }
 
-.modal_basket_content {
+.modal_basket {
   position: absolute;
   box-sizing: border-box;
   border: 3px solid #2e581f;
@@ -347,7 +388,6 @@ body {
   background-color: #e3faec;
   transition: 0.3s all;
   z-index: 2;
-  top: 50px;
 }
 
 .modal_basket-list {
@@ -410,8 +450,14 @@ body {
   font-size: 12px;
 }
 
+.modal_basket-item-counter-price {
+  display: flex;
+  margin-left: auto;
+}
+
 .modal_basket-item-counter {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   box-sizing: border-box;
   height: 30px;
@@ -508,14 +554,103 @@ body {
 }
 
 svg:hover,
-.side_menu-backet:hover,
-.side_menu-backet-count:hover {
+.side_menu-basket:hover,
+.side_menu-basket-count:hover,
+.side_menu-burger:hover,
+.side_menu-basket-mobile:hover,
+.side_menu-basket-count-mobile:hover {
   cursor: pointer;
+}
+
+@media (min-width: 521px) {
+  .side_menu-burger {display: none;}
+  .side_menu-title {justify-content: center;}
+}
+
+@media (max-width: 520px) {
+  .modal_basket-item-img {display: none;}
+
+  .modal_basket {max-width: 90%;}
+
+  .modal_basket-item-counter-price {
+    flex-direction: column;
+  }
+
+  .modal_basket-item-counter {margin-left: 0;}
+
+  .side_menu {display: none;}
+
+  .side_menu-title {position: relative;}
+
+  .side_menu-burger-mobile {
+    display: flex;
+    min-width: 50px;
+    min-height: 50px;
+    position: fixed;
+    top: 109px;
+    left: 7px;
+    margin: 0;
+    border: 2px solid #2e581f;
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    background-color: #becfc5;
+    margin-right: 15px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 7px #444;
+  }
+
+  .burger_top-mobile,
+  .burger_middle-mobile,
+  .burger_bottom-mobile {
+    width: 25px;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 2px;
+  }
+
+
+
+  .dishes {
+    justify-content: space-evenly;
+  }
+
+  .side_menu-basket-mobile {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #2e581f;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 7px;
+    left: 7px;
+    box-shadow: 0 0 7px #444;
+    background-color: #becfc5;
+  }
+
+  .side_menu-basket-mobile img {
+    width: 80%;
+    height: 80%;
+    object-fit:fill;
+    margin: 3px;
+  }
+
+  .side_menu-basket-count-mobile {
+    top: -10px;
+    left: 30px;
+    box-shadow: 0 0 7px #444;
+  }
 }
 
 /* Видимость и невидимость блоков */
 
-.dish_item-btn,
+/* .dish_item-btn,
 .dish_item-counter,
 .empty_basket,
 .empty_dish_item,
@@ -531,19 +666,23 @@ svg:hover,
 .dish_item-counter-visible,
 .modal_basket-visible {
   display: flex;
+} */
+
+.hidden {
+  display: none;
 }
 
 /* Активность неактивность блоков */
 
-.side_menu-list .side_menu-list-active {
+.side_menu-list .side_menu-item-active {
   color: #498c33;
 }
 
-.side_menu-list .side_menu-list-active,
-.side_menu-list .side_menu-list-active + li {
+.side_menu-list .side_menu-item-active,
+.side_menu-list .side_menu-item-active + li {
   border-top: 2px solid #2e581f;
 }
 
-.side_menu-list .side_menu-list-active:last-child {
+.side_menu-list .side_menu-item-active:last-child {
   border-bottom: 2px solid #2e581f;
 }
