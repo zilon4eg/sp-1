@@ -649,6 +649,56 @@
 			"price": 60,
 			"visible": true,
 			"deleted": false
-		}
+		},
+		{
+			"id": 66,
+			"category": "Напитки",
+			"title": "Вода Аква Минерале газ/ без газа",
+			"description": "",
+			"weight": 500,
+			"price": 60,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 67,
+			"category": "Напитки",
+			"title": "7UP ж/б",
+			"description": "",
+			"weight": 330,
+			"price": 65,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 68,
+			"category": "Напитки",
+			"title": "Adrenaline Rush ж/б",
+			"description": "",
+			"weight": 449,
+			"price": 150,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 69,
+			"category": "Напитки",
+			"title": "Drive Me original",
+			"description": "",
+			"weight": 449,
+			"price": 100,
+			"visible": true,
+			"deleted": false
+		},
+		{
+			"id": 70,
+			"category": "Напитки",
+			"title": "Питьевая вода Скандинавия",
+			"description": "",
+			"weight": 500,
+			"price": 40,
+			"visible": true,
+			"deleted": false
+		},
 	]
 }
